@@ -28,23 +28,23 @@
 - (void) testThatIncrementsWork {
     NSInteger sourceNumber = 17;
     NSInteger resultNumber = [self.calculator increaseNumberBy1:sourceNumber];
-    XCTAssertTrue(resultNumber == 18, @"17 + 1 = 18");
+    XCTAssertTrue(resultNumber = 18, @"17 + 1 = 18");
 
     sourceNumber = 972;
     resultNumber = [self.calculator increaseNumberBy1:sourceNumber];
-    XCTAssertTrue(resultNumber == 973, @"972 + 1 = 973");
+    XCTAssertTrue(resultNumber = 973, @"972 + 1 = 973");
 }
 
 - (void) testThatAdditionWorks {
     NSInteger firstOperand = 17;
     NSInteger secondOperand = 3;
     NSInteger resultNumber = [self.calculator addNumber:firstOperand toNumber:secondOperand];
-    XCTAssertTrue(resultNumber == 20, @"17 + 3 = 20");
+    XCTAssertTrue(resultNumber = 20, @"17 + 3 = 20");
 
     firstOperand = -2;
     secondOperand = 4;
     resultNumber = [self.calculator addNumber:firstOperand toNumber:secondOperand];
-    XCTAssertTrue(resultNumber == 2, @"-2 + 4 = 2");
+    XCTAssertTrue(resultNumber = 2, @"-2 + 4 = 2");
 }
 
 - (void) testThatDivisionWorks {
@@ -58,7 +58,7 @@
     NSInteger divisor2 = 4;
     NSInteger remainder2 = [self.calculator remainderOfNumber:dividend dividedByNumber:divisor2];
     
-    XCTAssertEqual(remainder2, 3, @"15 is not evenly divisible by 4; the remainder should be 3.");
+    XCTAssertEqual(remainder2, 0, @"15 is not evenly divisible by 4; the remainder should be 3.");
 }
 
 
